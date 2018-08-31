@@ -1,5 +1,5 @@
 const express       = require('express');
-
+const port          = process.env.PORT || 3000;
 const app   = express();
 
 
@@ -19,7 +19,7 @@ app.get('/', (req, res) =>{
 
 
 //Port Listening
-server              = app.listen(3000)
+server              = app.listen(port)
 const io            = require('socket.io')(server)
 
 //SocketIO Listens on every connection
